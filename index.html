@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>De Car Revolutionalist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="real.css" />
+</head>
+<body>
+
+  <!-- TOP NAVBAR -->
+  <header class="navbar" id="navbar">
+    <a href="#home" class="navbar-logo">
+      <img src="mages/22772.jpg" alt="DCR Logo" />
+    </a>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">&#9776;</button>
+  </header>
+
+  <!-- SIDE NAV DOTS -->
+  <nav class="side-nav" id="side-nav" aria-label="Section navigation">
+    <a href="#home"     class="side-nav-dot active"><span class="dot-inner"></span><span class="dot-label">Home</span></a>
+    <a href="#services" class="side-nav-dot"><span class="dot-inner"></span><span class="dot-label">Services</span></a>
+    <a href="#gallery"  class="side-nav-dot"><span class="dot-inner"></span><span class="dot-label">Gallery</span></a>
+    <a href="#buy"      class="side-nav-dot"><span class="dot-inner"></span><span class="dot-label">Shop</span></a>
+    <a href="#contact"  class="side-nav-dot"><span class="dot-inner"></span><span class="dot-label">Contact</span></a>
+  </nav>
+
+  <!-- =====================================================
+    HERO SECTION — FULL BACKGROUND 3D CAR
+    
+    Structure (bottom to top):
+    Layer 1: .hero-car-wrap  — the 3D stage (whole background)
+      └── .hero-car-img      — the car image (fills everything)
+      └── .hero-car-shadow   — shadow below car
+      └── .hero-car-reflection — floor reflection
+    Layer 2: .hero-glow      — headlight glow effects
+    Layer 3: .hero-vignette  — dark edges for depth
+    Layer 4: .hero-content   — text on top of everything
+  ====================================================== -->
+  <section id="home" class="hero" id="hero-section">
+
+    <!--
+      THE 3D STAGE
+      This entire div is what tilts with mouse movement.
+      The car image fills it completely like a background.
+      JS rotates this div in 3D space.
+    -->
+    <div class="hero-car-wrap" id="hero-car-wrap">
+
+      <!-- The car image — fills the entire background -->
+      <img
+        class="hero-car-img"
+        id="hero-car-img"
+        src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1600&q=85"
+        alt="Premium Car"
+      />
+
+      <!-- Floor reflection — flipped faded copy at bottom -->
+      <div class="hero-car-reflection" id="hero-car-reflection">
+        <img
+          src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1600&q=85"
+          alt=""
+          aria-hidden="true"
+        />
+      </div>
+
+      <!-- Shadow on the floor below car -->
+      <div class="hero-car-shadow" id="hero-car-shadow"></div>
+
+    </div>
+
+    <!-- Headlight glow effects — orange/white radial gradients -->
+    <div class="hero-glow" id="hero-glow">
+      <div class="glow-left"></div>
+      <div class="glow-right"></div>
+    </div>
+
+    <!--
+      Vignette — dark gradient around edges.
+      Makes car pop from the background and gives depth.
+    -->
+    <div class="hero-vignette"></div>
+
+    <!-- Bottom floor gradient — ground plane effect -->
+    <div class="hero-floor"></div>
+
+    <!-- Text content — sits on top of everything -->
+    <div class="hero-content">
+      <p class="hero-eyebrow">Premium Auto Parts &amp; Services</p>
+      <h1>De Car <span>Revolutionalist</span></h1>
+      <p class="hero-tagline">
+        Your No.1 Hub for Car Parts,<br>Accessories &amp; Premium Auto Services
+      </p>
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-primary">Explore Services</a>
+        <a href="shop.html" class="btn btn-outline">Visit Shop</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator at bottom -->
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="services">
+    <div class="section-header">
+      <p class="section-label">What We Offer</p>
+      <h2>Our Services</h2>
+    </div>
+    <div class="service-cards">
+      <div class="card reveal">
+        <div class="card-icon"></div>
+        <h3>Wide Range Of Parts</h3>
+        <p>Headlamps, body parts ranging from bumper, front grill, bonnet, doors, fog lamps, and more — we stock it all.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"></div>
+        <h3>Top Brands, Affordable Prices</h3>
+        <p>Genuine parts from trusted brands without breaking the bank.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"></div>
+        <h3>Transparent &amp; Trusted</h3>
+        <p>Shop with 100% confidence. Detailed compatibility lists and our No-Hassle Fitment Guarantee.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"></div>
+        <h3>Fast &amp; Reliable Delivery</h3>
+        <p>We deliver right to your doorstep so you can get back on the road in no time.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"></div>
+        <h3>Expert Advice</h3>
+        <p>Our team of professionals is here to help you find the perfect part for your vehicle.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"></div>
+        <h3>Upgrade Your Ride</h3>
+        <p>Everything you need to keep your vehicle running smoothly whether you are a mechanic or DIY enthusiast.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"></div>
+        <h3>Upgrade Your Ride</h3>
+        <p>Everything you need to keep your vehicle running smoothly whether you are a mechanic or DIY enthusiast.</p>
+      </div>
+      <div class="card reveal">
+        <div class="card-icon"></div>
+        <h3>Upgrade Your Ride</h3>
+        <p>Everything you need to keep your vehicle running smoothly whether you are a mechanic or DIY enthusiast.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery" class="gallery">
+    <div class="section-header">
+      <p class="section-label">Our Work</p>
+      <h2>Gallery</h2>
+    </div>
+    <div class="gallery-grid">
+              <div class="gallery-item reveal"><img src="mages/239fa10d488646ab72f71db55ca3ee55.jpg" alt="Car part" loading="lazy" /></div>
+                    <div class="gallery-item reveal"><img src="mages/61466e8e6233e545b049401ba465a75b.jpg" alt="Car part" loading="lazy" /></div>
+                          <div class="gallery-item reveal"><img src="mages/a40c1cef9cf90b15f11e2f90b5cd45da.jpg" alt="Car part" loading="lazy" /></div>
+      <div class="gallery-item reveal"><img src="mages/8f502f6b09f4748c022819d762da103d.jpg" alt="Car part" loading="lazy" /></div>
+      <div class="gallery-item reveal"><img src="mages/8f502f6b09f4748c022819d762da103d.jpg" alt="Car part" loading="lazy" /></div>
+      <div class="gallery-item reveal"><img src="mages/70cf37bb42f0d6044902db6690ac4fc7.jpg" alt="Car part" loading="lazy" /></div>
+      <div class="gallery-item reveal"><img src="mages/99b644492b7fdf773939370e83f4f92c.jpg" alt="Car part" loading="lazy" /></div>
+      <div class="gallery-item reveal"><img src="mages/657c859b27b596cbeae6d2633f14e43a.jpg" alt="Car part" loading="lazy" /></div>
+      <div class="gallery-item reveal"><img src="mages/61466e8e6233e545b049401ba465a75b.jpg" alt="Car part" loading="lazy" /></div>
+      <div class="gallery-item reveal"><img src="mages/bbe6ba7315e121506151424185ac1d85.jpg" alt="Car part" loading="lazy" /></div>
+      <div class="gallery-item reveal"><img src="mages/db18b369736c19835498764fd51465be.jpg" alt="Car part" loading="lazy" /></div>
+      <div class="gallery-item reveal"><img src="mages/e06ff3fe3479bf2e3cfb703e72cbb293.jpg" alt="Car part" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <!-- BUY / CTA -->
+  <section id="buy" class="buy">
+    <div class="buy-content reveal">
+      <h2>Ready to Upgrade?</h2>
+      <p>Browse our shop to find the parts and packages you need.</p>
+      <a href="shop.html" class="btn btn-primary">Open Shop</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="section-header">
+      <p class="section-label">Get In Touch</p>
+      <h2>Contact Us</h2>
+    </div>
+    <p class="contact-intro">Need custom work or have a question? Send us a message or chat directly on WhatsApp.</p>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html" class="contact-form">
+      <p class="hidden-field"><label>Do not fill: <input name="bot-field" /></label></p>
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="text"  name="name"    placeholder="Your Name"    required />
+      <input type="email" name="email"   placeholder="Your Email"   required />
+      <textarea           name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+    <div class="contact-whatsapp">
+      <p>Or chat with us directly:</p>
+      <a href="https://wa.me/2348166456295?text=Hello!%20I%20want%20to%20see%20your%20product%20catalog." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" id="consoleLink">chat with us directly</a>
+    </div>
+    <footer class="footer">
+      <div class="footer-inner">
+<div class="footer-copy">© <span id="footer-year"></span> De Car Revolutionalist</div>
+        <div class="footer-links">
+          <a href="shop.html">Shop</a>
+          <a href="https://wa.me/c/2348166456295" target="_blank" rel="noopener noreferrer">WhatsApp Catalog</a>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script src="real.js"></script>
+</body>
+</html>
