@@ -195,15 +195,24 @@
       <p class="section-label">Get In Touch</p>
       <h2>Contact Us</h2>
     </div>
-    <p class="contact-intro">Need custom work or have a question? Send us a message or chat directly on WhatsApp.</p>
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html" class="contact-form">
-      <p class="hidden-field"><label>Do not fill: <input name="bot-field" /></label></p>
-      <input type="hidden" name="form-name" value="contact" />
-      <input type="text"  name="name"    placeholder="Your Name"    required />
-      <input type="email" name="email"   placeholder="Your Email"   required />
-      <textarea           name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn btn-primary">Send Message</button>
+    <form id="contactForm" class="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required />
+
+  <input type="email" name="email" placeholder="Your Email" required />
+
+  <input type="text" name="subject" placeholder="Subject" required />
+
+  <textarea
+    name="message"
+    placeholder="Your Message"
+    required
+  ></textarea>
+
+  <button type="submit" class="btn btn-primary">
+    Send Message
+  </button>
     </form>
+      
     <div class="contact-whatsapp">
       <p>Or chat with us directly:</p>
       <a href="https://wa.me/2348166456295?text=Hello!%20I%20want%20to%20see%20your%20product%20catalog." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" id="consoleLink">chat with us directly</a>
