@@ -200,3 +200,37 @@ const footerYear = document.getElementById('footer-year');
 if (footerYear) {
   footerYear.textContent = new Date().getFullYear();
 }
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name: contactForm.name.value,
+      email: contactForm.email.value,
+      subject: contactForm.subject.value,
+      message: contactForm.message.value,
+    };
+
+    try {
+      const response = await fetch("/.netlify/functions/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        window.location.href = "/success.html";
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("An error occurred while sending your message.");
+    }
+  });
+}
