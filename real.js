@@ -215,7 +215,7 @@ if (contactForm) {
     };
 
     try {
-      const response = await fetch("/.netlify/functions/contact", {
+      const response = await fetch("/api/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -223,13 +223,15 @@ if (contactForm) {
         body: JSON.stringify(formData),
       });
 
+      const result = await response.json();
+
       if (response.ok) {
         window.location.href = "/success.html";
       } else {
-        alert("Failed to send message. Please try again.");
+        alert(result.error || "Failed to send message. Please try again.");
       }
     } catch (error) {
-      console.error(error);
+      console.error("Error:", error);
       alert("An error occurred while sending your message.");
     }
   });
