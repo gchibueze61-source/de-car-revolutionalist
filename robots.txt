@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://de-car-revolutionalist.vercel.app/sitemap.xml
