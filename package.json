@@ -1,0 +1,24 @@
+{
+  "name": "dcr-3.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "real.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gchibueze61-source/de-car-revolutionalist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gchibueze61-source/de-car-revolutionalist/issues"
+  },
+  "homepage": "https://github.com/gchibueze61-source/de-car-revolutionalist#readme",
+  "dependencies": {
+    "resend": "^6.18.0"
+  }
+}
